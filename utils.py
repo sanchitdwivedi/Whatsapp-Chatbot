@@ -1,5 +1,5 @@
 import os
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "bot-new-rubr-374f04a2b0ac.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "bot-new-rubr-76aca2d81f57.json"
 
 import dialogflow_v2 as dialogflow
 dialogflow_session_client = dialogflow.SessionsClient()
