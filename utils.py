@@ -15,8 +15,10 @@ def detect_intent_from_text(msg, sender, language_code='en'):
     return response.query_result
 
 def getGoogleResult(parameters):
-    query = parameters.fields["query"]
-    return search(query.string_value, tld="co.in", num=1, stop=1, pause=1)
+    query = parameters.fields["query"].list_value.values[0].string_value
+    print(parameters)
+    print(query)
+    return search(query, tld="co.in", num=1, stop=1, pause=1)
 
 def fetch_reply(msg, sender):
     response = detect_intent_from_text(msg, sender)
